@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hanna.grafiplotvasquez.com/sitemap.xml
