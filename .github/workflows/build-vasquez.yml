@@ -1,22 +1,29 @@
-name: Build VASQUEZ
+name: Build and publish VASQUEZ
 on:
   push:
     branches: ['rediseño-vasquez']
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: vasquez-publish
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: npm install
       - run: npm run build
-      - uses: actions/upload-artifact@v4
-        with:
-          name: vasquez-pages
-          path: docs/
-          include-hidden-files: true
+      - name: Publish compiled site to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f docs
+          git diff --cached --quiet || git commit -m "Publica VASQUEZ Confecciones"
+          git push origin HEAD:main
