@@ -1,5 +1,5 @@
 export const initial = {
-  whatsappNumber:'+51 931 015 583',whatsappMessage:'Hola VASQUEZ, me gustaría información sobre prendas personalizadas.',whatsappButton:'Contactar por WhatsApp',
+  whatsappNumber:'+51 916 133 647',whatsappMessage:'Hola VASQUEZ, me gustaría información sobre prendas personalizadas.',whatsappButton:'Contactar por WhatsApp',
   announcement:'CONFECCIÓN PERSONALIZADA · TU MARCA, TU ESTILO', benefit1:'Tus colores',benefit2:'Tu confección',benefit3:'Tu identidad',heroFoot:'01 / CONFECCIÓN CON IDENTIDAD', featureButton:'Conoce el proceso',processEyebrow:'ASÍ EMPIEZA TU CREACIÓN',partnersEyebrow:'COLABORADORES', selectionTitle:'Tu selección',selectionText:'Estas son las colecciones que te interesan. Puedes copiar la lista para preparar tu consulta.',selectionButton:'Copiar selección',collectionText:'Una colección que puedes personalizar con tus colores, textos y logo.',collectionButton:'Añadir a mi selección',footerNote:'Confecciones y Creaciones',
   brand: 'VASQUEZ', tagline: 'Ojal · Botón · Confecciones',
   navCatalog: 'Colecciones', navProcess: 'Cómo lo hacemos', navAbout: 'Nuestra esencia',
