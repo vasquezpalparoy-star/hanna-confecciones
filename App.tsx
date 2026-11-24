@@ -30,7 +30,7 @@ export default function Home(){
     loaded=initial;
     setConnection('Firebase conectado. Listo para tu primer guardado.');
    }else setConnection('Firebase conectado · contenido cargado');
-   if(!dirty.current){const branded={...loaded,brand:'VASQUEZ',tagline:loaded.tagline.replace(/HANNA/gi,'VASQUEZ'),logoImage:loaded.logoImage||'/vasquez-logo.svg'};for(const key of Object.keys(branded)){const k=key as keyof Content;if(typeof branded[k]==='string'&&!key.toLowerCase().includes('image'))(branded as unknown as Record<string,unknown>)[key]=(branded[k] as string).replace(/HANNA/gi,'VASQUEZ');}setData(branded);setSaved(branded)}
+   if(!dirty.current){const branded={...loaded,whatsappNumber:'+51 916 133 647',brand:'VASQUEZ',tagline:loaded.tagline.replace(/HANNA/gi,'VASQUEZ'),logoImage:loaded.logoImage||'/vasquez-logo.svg'};for(const key of Object.keys(branded)){const k=key as keyof Content;if(typeof branded[k]==='string'&&!key.toLowerCase().includes('image'))(branded as unknown as Record<string,unknown>)[key]=(branded[k] as string).replace(/HANNA/gi,'VASQUEZ');}setData(branded);setSaved(branded)}
    setReady(true);
   }catch(e){
    console.error(e);setReady(false);setConnection(firebaseMessage(e));
